@@ -9,25 +9,26 @@ def subsets(nums):
     next = []
   return subsets 
 
-print(subsets([1,2,3]))
+# print(subsets([1,2,3]))
 
 def subs(l):
     if len(l) == 1:
         return [l]
     res = []
+    print res, "1"
     subsets = subs(l[0:-1])
-    print(subsets, "1")
+    print subsets
     res = res+subsets
-    print(res, "2")
+    print res, "2"
     res.append([l[-1]])
-    print(res, '3')
+    print res, "3"
     for sub in subsets:
-    	print(sub, "4")
         res.append(sub+[l[-1]])
-        print(res, "5")
+        print res, "4"
     return res
 
-print(subs([1,2,3]))
+print(subs([1,2,3,4]))
+print([1,2,3][-1])
 
 
 
